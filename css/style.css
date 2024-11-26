@@ -1,0 +1,601 @@
+:root{
+    --Montserrat: "Montserrat";
+    --Poppins: "Poppins";
+    --heading-color: #343434;
+    --body-color: #748182;
+    --bg-color: #f7f7f7;
+    --light-color: #f4f4f4;
+    --hover-color: #1c1c1c;
+    --transition: 0.4s ease-in-out all;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: var(--Montserrat);
+}
+body{
+    font-family: "Poppins";
+    color: var(--body-color);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: 100%;
+}
+.section-padding{
+    padding: 6.25rem 0;
+}
+.fw-800{
+    font-weight: 800;
+}
+.heading-color{
+    color: var(--heading-color);
+}
+.title{
+    h3{
+        font-weight: 900;
+        z-index: 1;
+        &::after{
+            content: "";
+            position: absolute;
+            background-image: url('../images/dots.png');
+            width: 100%;
+            height: 70%;
+            left: 0;
+            bottom: -5%;
+            z-index: -1;
+        }
+    }    
+}
+.btn-dark-custom{
+    --bs-btn-bg: var(--hover-color);
+    --bs-btn-hover-border-color: var(--hover-color);
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: var(--hover-color);
+}
+/*^ NAVBAR */
+#navbar{
+    .navbar-brand{
+        letter-spacing: 1px;
+        font-size: 1.125rem;
+        color: var(--hover-color);
+    }
+    .navbar-toggler{
+        border: 0;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .nav-link{
+        font-size: 0.875rem;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #222;
+            left: 10%;
+            bottom: 15%;
+            transition: var(--transition);
+        }
+        &.active{
+            &:before{
+                width: 80%;
+            }
+        }
+    }
+}
+/*~ HOME */
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../Images/bg.jpg);
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    h5{
+        font-size: 3.125rem;
+    }
+    h1{
+        font-size: 1.875rem;
+        font-weight: 200;
+        span{
+            &::after{
+                content: "|";
+                animation: typing 8s ease-out infinite;
+            }
+        }
+    }
+    .social-icon{
+        width: 35px;
+        height: 35px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+@keyframes typing {
+    0% {
+        content: "|";
+    }
+    1.3% {
+        content: "|";
+    }
+    2.6% {
+        content: "|";
+    }
+    3.9% {
+        content: "D|";
+    }
+    5.2% {
+        content: "De|";
+    }
+    6.5% {
+        content: "Dev|";
+    }
+    7.8% {
+        content: "Deve|";
+    }
+    9.1% {
+        content: "Devel|";
+    }
+    10.4% {
+        content: "Develo|";
+    }
+    11.7% {
+        content: "Develop|";
+    }
+    13% {
+        content: "Develope|";
+    }
+    14.3% {
+        content: "Developer|";
+    }
+    15.6% {
+        content: "Developer |";
+    }
+    16.9% {
+        content: "Developer|";
+    }
+    18.2% {
+        content: "Develope|";
+    }
+    19.5% {
+        content: "Develop|";
+    }
+    20.8% {
+        content: "Develo|";
+    }
+    22.1% {
+        content: "Devel|";
+    }
+    23.4% {
+        content: "Deve|";
+    }
+    24.7% {
+        content: "Dev|";
+    }
+    26% {
+        content: "De|";
+    }
+    27.3% {
+        content: "D|";
+    }
+    28.6% {
+        content: "|";
+    }
+    29.9% {
+        content: "|";
+    }
+    31.2% {
+        content: "|";
+    }
+    32.5% {
+        content: "D|";
+    }
+    33.8% {
+        content: "De|";
+    }
+    35.1% {
+        content: "Des|";
+    }
+    36.4% {
+        content: "Desi|";
+    }
+    37.7% {
+        content: "Desig|";
+    }
+    39% {
+        content: "Design|";
+    }
+    40.3% {
+        content: "Designe|";
+    }
+    41.6% {
+        content: "Designer|";
+    }
+    42.9% {
+        content: "Designer |";
+    }
+    44.2% {
+        content: "Designer|";
+    }
+    45.5% {
+        content: "Designe|";
+    }
+    46.8% {
+        content: "Design|";
+    }
+    48.1% {
+        content: "Desig|";
+    }
+    49.4% {
+        content: "Desi|";
+    }
+    50.7% {
+        content: "Des|";
+    }
+    52% {
+        content: "De|";
+    }
+    53.3% {
+        content: "D|";
+    }
+    54.6% {
+        content: "|";
+    }
+    55.9%{
+        content: "|";
+    }
+    57.2% {
+        content: "|";
+    }
+    58.5% {
+        content: "L|";
+    }
+    59.8% {
+        content: "La|";
+    }
+    61.1% {
+        content: "Lar|";
+    }
+    62.4% {
+        content: "Larr|";
+    }
+    63.7% {
+        content: "Larry|";
+    }
+    65% {
+        content: "Larry |";
+    }
+    66.3% {
+        content: "Larry D|";
+    }
+    67.6%{
+        content: "Larry Da|";
+    }
+    68.9% {
+        content: "Larry Dan|";
+    }
+    70.2% {
+        content: "Larry Dani|";
+    }
+    71.5% {
+        content: "Larry Danie|";
+    }
+    72.8% {
+        content: "Larry Daniel|";
+    }
+    74.1% {
+        content: "Larry Daniels|";
+    }
+    75.4% {
+        content: "Larry Daniels |";
+    }
+    76.7% {
+        content: "Larry Daniels|";
+    }
+    78% {
+        content: "Larry Daniel|";
+    }
+    79.3%{
+        content: "Larry Danie|";
+    }
+    80.6% {
+        content: "Larry Dani|";
+    }
+    81.9% {
+        content: "Larry Dan|";
+    }
+    83.2% {
+        content: "Larry Da|";
+    }
+    84.5%{
+        content: "Larry D|";
+    }
+    85.8% {
+        content: "Larry |";
+    }
+    87.1% {
+        content: "Larry|";
+    }
+    88.4% {
+        content: "Larr|";
+    }
+    89.7% {
+        content: "Lar|";
+    }
+    91% {
+        content: "La|";
+    }
+    92.3% {
+        content: "L|";
+    }
+    93.6% {
+        content: "|";
+    }
+    94.9% {
+        content: "|";
+    }
+    96.2%{
+        content: "|";
+    }
+}
+/*! ABOUT */
+#about{
+    .about-img{
+        &::after{
+            content: "";
+            position: absolute;
+            background-image: url('../images/dots.png');
+            width: 80%;
+            height: 80%;
+            background-repeat: repeat;
+            left: 0px;
+            bottom: -6%;
+            z-index: -1;
+        }
+    }
+    .sub-title{
+        color: #999;
+        letter-spacing: 2px;
+    }
+    .progress-custom{
+        --bs-progress-height: 1.5rem;
+        --bs-progress-bg: var(--bg-color);
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+        .progress-bar{
+            background-color: var(--hover-color);
+            font-size: 0.688rem;
+            border-radius: 5px;
+            h6{
+                font-size: 0.813rem;
+            }
+        }
+        .w-95{
+            width: 95%;
+        }
+        .w-80{
+            width: 80%;
+        }
+        .w-90{
+            width: 90%;
+        }
+    }
+    .btn{
+        --bs-btn-padding-x: 1.875rem;
+        --bs-btn-padding-y: 0.625rem;
+        --bs-btn-font-size: 0.813rem;
+    }
+    .btn-outline-dark-custom{
+        --bs-btn-border-color: var(--hover-color);
+        --bs-btn-hover-bg: var(--hover-color);
+        --bs-btn-hover-color: #fff;
+    }
+}
+/*^ SERVICES */
+#services{
+    background-color: var(--bg-color);
+    .services-inner{
+        p{
+            font-size: 0.875rem;
+        }
+        &:hover{
+            .service-icon{
+                background-color: var(--hover-color);
+                i{
+                    color: #fff;
+                }
+            }
+        }
+        .service-icon{
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-color);
+            transition: var(--transition);
+        }
+    }
+}
+/*todo WORKS */
+#works{
+    .nav-link{
+        --bs-nav-link-color: #222;
+        &:hover, &:focus{
+            --bs-nav-link-hover-color: #222;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #222;
+            left: 20%;
+            bottom: 11%;
+            transition: var(--transition);
+        }
+        &.active{
+            &:before{
+                width: 60%;
+            }
+        }
+    }
+    .work-img{
+        .work-overlay{
+            background-color: rgba(255, 255, 255, 0.9);
+            inset: 5px;
+            opacity: 0;
+            transition: var(--transition);
+            transform: translateY(10px);
+            h6{
+                letter-spacing: 2px;
+                font-size: 0.75rem;
+                transition: var(--transition);
+                transform: translateY(-15px);
+            }
+            .icons{
+                span{
+                    width: 30px;
+                    height: 30px;
+                    background-color: #000;
+                    border: 1px solid #000;
+                    transition: var(--transition);
+                    i{
+                        color: #fff;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        i{
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .work-overlay{
+                opacity: 1;
+                transform: translateY(0);
+                h6{
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    .modal{
+        --bs-modal-width: 45%;
+    }
+}
+/*& CLIENTS */
+#clients{
+    background-color: var(--bg-color);
+    .item{
+        img{
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+        p{
+            word-spacing: 2px;
+            max-width: 85%;
+        }
+        span{
+            font-size: 0.75rem;
+            color: #888;
+        }
+    }
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+        margin: 0 7px;
+        background-color: #969696;
+        &.active{
+            background-color: #869791;
+        }
+    }
+}
+/*todo TEAM */
+#team{
+    background-color: var(--bg-color);
+    .card{
+        .card-inner{
+            .card-img{
+                img{
+                    transition: var(--transition);
+                }
+            }
+            .social-overlay{
+                background-color: rgba(255, 255, 255, 0.9);
+                inset: 5px;
+                opacity: 0;
+                transition: var(--transition);
+                transform: rotateY(180deg) scale(0.5, 0.5);
+                li{
+                    width: 40px;
+                    height: 40px;
+                    background-color: #000;
+                    border: 1px solid #000;
+                    transition: var(--transition);
+                    i{
+                        color: #fff;
+                    }
+                    &:hover{
+                        background-color: #fff;
+                        i{
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                img{
+                    scale: 1.2;
+                }
+            }
+        }
+        .card-body{
+            background-color: #5B5B5B;
+        }
+        &:hover{
+            .social-overlay{
+                opacity: 1;
+                transform: rotateY(0deg) scale(1, 1);
+            }
+        }
+    }
+}
+/*~ CONTACT */
+#contact{
+    .contact-item{
+        &:hover{
+            .contact-icon{
+                background-color: var(--hover-color);
+                i{
+                    color: #fff;
+                }
+            }
+        }
+        .contact-icon{
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-color);
+            transition: var(--transition);
+        }
+    }
+    form{
+        .form-control{
+            background-color: var(--light-color);
+            border: 0;
+            font-size: 0.875rem;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .btn{
+            --bs-btn-padding-x: 2.5rem;
+            --bs-btn-padding-y: 0.625rem;
+            --bs-btn-font-size: 0.813rem;
+        }
+    }
+}
+/*? FOOTER */
+footer{
+    background-color: var(--hover-color);
+    p{
+        font-size: 0.813rem;
+    }
+}
